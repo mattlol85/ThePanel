@@ -22,4 +22,4 @@ while True:
     pixels.fill((255,0,0))
     pixels.show()
     time.sleep(1)
-    print(++counter)
+    print(counter)
