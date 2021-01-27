@@ -16,10 +16,10 @@ led_data_pin, num_pixels, brightness=0.2,
     auto_write=False,
     pixel_order=ORDER
 )
-
+counter = 0
 while True:
     pixels.fill((255,0,0))
     pixels.show()
     time.sleep(1)
-    print(counter+1)
+    print(counter+=1)
     
