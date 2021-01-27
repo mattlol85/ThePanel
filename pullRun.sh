@@ -2,4 +2,4 @@
 
 git pull
 
-python3 LibTest.py
+sudo python3 LibTest.py
