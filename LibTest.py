@@ -1,10 +1,21 @@
 import time
 import board
 import neopixel
-pixels = neopixel.NeoPixel(board.D12,12)
 
+# Data Pin for LED Ring
+led_data_pin = board.D12
+# Number of pixels
+num_pixels = 12
+
+# Set color order
 ORDER = neopixel.GRB
-counter = 0
+
+# Instantiate the pixel strip object
+pixels = neopixel.NeoPixel(
+led_data_pin, num_pixels, brightness=0.2,
+    auto_write=False,
+    pixel_order=ORDER
+)
 
 while True:
     pixels.fill((255,0,0))
