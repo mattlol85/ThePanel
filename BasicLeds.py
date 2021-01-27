@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 ###################
 # Driver Program for Raspberry Pi Lights/Switches/Buttons
 #
@@ -12,6 +14,7 @@ import time
 import RPi.GPIO as GPIO
 from gpiozero import LED
 from gpiozero import Button
+from gpiozero import PWMLED
 from signal import pause
 
 
@@ -23,12 +26,12 @@ from signal import pause
 
 button = Button(2)
 redLed = PWMLED(15)
-greenLed = LED(14)
+greenLed = PWMLED(14)
 
 while True:
     if button.is_pressed:
-        greenLed.pulse()
         print("Button Is pressed")
-        pause()
+        greenLed.pulse()
     else:
         print("Button not pressed")
+        redLed.pulse()
